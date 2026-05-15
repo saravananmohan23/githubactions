@@ -1,0 +1,23 @@
+name: newworkflow
+on:
+  push:
+  workflow_dispatch:
+
+
+jobs:
+    sarav:
+        runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: ./04-usingnodejs/react-app
+        steps:
+        - name: Display information
+          run: |
+                echo "This is the new workflow ${{github.workflow}} triggered by ${{github.event_name}} event."
+                echo "The current working directory is: $PWD"
+                echo "${{github.actor}} triggered this workflow."
+                echo "The runner OS is: $RUNNER_OS"
+                echo "The GitHub workspace is: $GITHUB_WORKSPACE"
+        - name: Retrieve variable
+          run: |
+                echo "The value of the 'my_var' variable is: ${{vars.MY_VAR}}"
