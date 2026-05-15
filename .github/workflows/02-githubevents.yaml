@@ -1,0 +1,13 @@
+name : mysecondworkflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+         my-first-jobs:
+            runs-on : ubuntu-latest
+            steps:
+                 - name : show trigger
+                   run:  have been triggered by ${{ github.event_name }} event
+   
