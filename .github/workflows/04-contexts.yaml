@@ -10,7 +10,7 @@ jobs:
         steps:
         - name: Display information
           run: |
-                echo "This is the new workflow ${{github.workflow}} triggered by ${{github.event_name}} event."
+                echo "This is the new workflow: ${{github.workflow}} triggered by: ${{github.event_name}} event."
                 echo "The current working directory is: $PWD"
                 echo "${{github.actor}} triggered this workflow."
                 echo "The runner OS is: $RUNNER_OS"
