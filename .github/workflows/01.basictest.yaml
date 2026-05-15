@@ -10,3 +10,12 @@ jobs:
   
             - name : run my first command
               run : echo "hello world"
+    my-second-jobs:
+       runs-on : ubuntu-latest
+       steps:
+            - name : checkout code
+              uses : actions/checkout@v2
+  
+            - name : run my second command
+              run : echo "hello world again2 times"          
+
