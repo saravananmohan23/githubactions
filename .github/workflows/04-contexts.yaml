@@ -7,9 +7,6 @@ on:
 jobs:
     sarav:
         runs-on: ubuntu-latest
-        defaults:
-          run:
-            working-directory: ./04-usingnodejs/react-app
         steps:
         - name: Display information
           run: |
