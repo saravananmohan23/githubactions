@@ -1,0 +1,12 @@
+name : myworkflow
+on: push
+
+jobs: 
+    my-first-jobs:
+       runs-on : ubuntu-latest
+       steps:
+            - name : checkout code
+              uses : actions/checkout@v2
+  
+            - name : run my first command
+              run : echo "hello world"
