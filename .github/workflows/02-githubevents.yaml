@@ -1,8 +1,11 @@
 name : mysecondworkflow
 on:
   push:
-    branches:
-      - main
+  pull_request:
+      branches:
+        - main
+  workflow_dispatch:      
+
 
 jobs:
          my-first-jobs:
