@@ -1,0 +1,25 @@
+name:  newworflow
+on: 
+  push
+
+jobs:
+   sarav:
+     runs-on: ubuntu-latest
+     defaults:
+       run:
+         working-directory: ./04-github-actions
+     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  
+      - name: install dependencies
+        run: npm ci
+      - name: run tests
+        run: npm test
+      - name: build project
+        run: npm run test
+      - name: deploy to production
+        run: echo "Deploying to production environment..."    
